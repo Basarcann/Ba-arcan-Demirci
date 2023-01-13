@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Sitem</title>
+    <link rel="stylesheet" href="eticaret.css">
+    <style>
+        .ticaret{
+            float:right;
+            margin: 7px;
+            width: 717px;
+            height: 450px;
+            border-radius: 50px;
+        }
+        .cümle{
+            color: #5d085e;
+            font-size: 33px;
+            margin: 25px;
+            font-family: 'Oswald', sans-serif;
+            
+        }
+        .cümle2{
+            color: #23424f;
+            font-size: 25px;
+            margin: 19px;
+            font-family: 'Lobster', cursive;
+            line-height: 30px;
+            padding: 10px;
+        }
+        .cümle3{
+            color: #7d0414;
+            font-size: 26px;
+            margin: 19px;
+            font-family: 'Righteous', cursive;
+            padding: 10px;
+        }
+        .cümle4{
+            display: flex;
+            padding: 7px;
+        }
+        .d1{
+            display: flex;
+            height: 75px;
+            width: 250px;
+            font-size: 25px;
+            margin: 16px;
+            color: white;
+            background-color: #ff2a00;
+            justify-content: center;
+            align-items: center;
+            border-radius: 35px;
+            transition: all 1s ease-in;
+            font-family: 'Righteous', cursive;
+        }
+        .d1:hover{
+            transform:scale(1.1);
+        }
+        .tbs{
+            font-size: 38px;
+            text-align: center;
+            letter-spacing: 1px;
+            font-family: 'Righteous', cursive;
+            color: #3F0071;
+        }
+        .dagtırmanış{
+            margin: 8px;
+            width: 50%;
+            border-radius: 125px;
+            float: left;
+        }
+        .wrapper{
+            flex: 1 1 625px;
+            max-width:50%;
+            /*transform: translate(4%, -20%);*/
+
+            height:auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card{
+            flex: 1;
+            flex-basis: 450px;
+            flex-grow: 0;
+            height: 440px;
+            background: #fff;
+            border: 2px solid #fff;
+            box-shadow: 0px 4px 7px rgba(0,0,0,.5);
+            cursor: pointer;
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+            overflow: hidden;
+            position: relative;
+        }
+        .card img{
+            width: 100%;
+            height:100%;
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+        }
+        .descriptions{
+            position: absolute;
+            top:0px;
+            left:0px;
+            background-color: rgba(255,255,255,.7);
+            width:100%;
+            height:100%;
+            transition: all .7s ease-in-out;
+            padding: 20px;
+            box-sizing: border-box;
+            clip-path: circle(0% at 100% 100%);
+        }
+        .card:hover .descriptions{
+            left:0px;
+            transition: all .7s ease-in-out;
+            clip-path: circle(75%);
+        }
+        .card:hover{
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+            box-shadow: 0px 2px 3px rgba(0,0,0,.3);
+            transform: scale(.97);
+        }
+        .card:hover img{
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+            transform: scale(1.6) rotate(20deg);
+            filter: blur(3px);
+        }
+        .card h1{
+            color: #ff3838;
+            letter-spacing: 1px;
+            margin: 0px;
+        }
+        .card p{
+            line-height: 24px;
+            height: 70%;
+            font-size: 20px;
+        }   
+        .wrapper2{
+            flex: 1 1 625px;
+            max-width:50%;
+            /*transform: translate(-74%, -20%);*/
+      
+            height:auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card2{
+            flex: 1;
+            flex-basis: 450px;
+            flex-grow: 0;
+            height: 440px;
+            background: #fff;
+            border: 2px solid #fff;
+            box-shadow: 0px 4px 7px rgba(0,0,0,.5);
+            cursor: pointer;
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+            overflow: hidden;
+            position: relative;
+        }
+        .card2 img{
+            width: 100%;
+            height:100%;
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+        }
+        .descriptions2{
+            position: absolute;
+            top:0px;
+            left:0px;
+            background-color: rgba(255,255,255,.7);
+            width:100%;
+            height:100%;
+            transition: all .7s ease-in-out;
+            padding: 20px;
+            box-sizing: border-box;
+            clip-path: circle(0% at 100% 100%);
+        }
+        .card2:hover .descriptions2{
+            left:0px;
+            transition: all .7s ease-in-out;
+            clip-path: circle(75%);
+        }
+        .card2:hover{
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+            box-shadow: 0px 2px 3px rgba(0,0,0,.3);
+            transform: scale(.97);
+        }
+        .card2:hover img{
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+            transform: scale(1.6) rotate(20deg);
+            filter: blur(3px);
+        }
+        .card2 h1{
+            color: #ff3838;
+            letter-spacing: 1px;
+            margin: 0px;
+        }
+        .card2 p{
+            line-height: 24px;
+            height: 70%;
+            font-size: 20px;
+        }   
+        .wrapper3{
+            flex: 1 1 625px;
+            max-width:50%;
+            /*transform: translate(-74%, 88%);*/
+
+
+            height:auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card3{
+            flex: 1;
+            flex-basis: 450px;
+            flex-grow: 0;
+            height: 440px;
+            background: #fff;
+            border: 2px solid #fff;
+            box-shadow: 0px 4px 7px rgba(0,0,0,.5);
+            cursor: pointer;
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+            overflow: hidden;
+            position: relative;
+        }
+        .card3 img{
+            width: 100%;
+            height:100%;
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+        }
+        .descriptions3{
+            position: absolute;
+            top:0px;
+            left:0px;
+            background-color: rgba(255,255,255,.7);
+            width:100%;
+            height:100%;
+            transition: all .7s ease-in-out;
+            padding: 20px;
+            box-sizing: border-box;
+            clip-path: circle(0% at 100% 100%);
+        }
+        .card3:hover .descriptions3{
+            left:0px;
+            transition: all .7s ease-in-out;
+            clip-path: circle(75%);
+        }
+        .card3:hover{
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+            box-shadow: 0px 2px 3px rgba(0,0,0,.3);
+            transform: scale(.97);
+        }
+        .card3:hover img{
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+            transform: scale(1.6) rotate(20deg);
+            filter: blur(3px);
+        }
+        .card3 h1{
+            color: #ff3838;
+            letter-spacing: 1px;
+            margin: 0px;
+        }
+        .card3 p{
+            line-height: 24px;
+            height: 70%;
+            font-size: 20px;
+        }
+        .wrapper4{
+            flex: 1 1 625px;
+            max-width:50%;
+            /*transform: translate(4%, 88%);*/
+
+            height:auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card4{
+            flex: 1;
+            flex-basis: 450px;
+            flex-grow: 0;
+            height: 440px;
+            background: #fff;
+            border: 2px solid #fff;
+            box-shadow: 0px 4px 7px rgba(0,0,0,.5);
+            cursor: pointer;
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+            overflow: hidden;
+            position: relative;
+        }
+        .card4 img{
+            width: 100%;
+            height:100%;
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+        }
+        .descriptions4{
+            position: absolute;
+            top:0px;
+            left:0px;
+            background-color: rgba(255,255,255,.7);
+            width:100%;
+            height:100%;
+            transition: all .7s ease-in-out;
+            padding: 20px;
+            box-sizing: border-box;
+            clip-path: circle(0% at 100% 100%);
+        }
+        .card4:hover .descriptions4{
+            left:0px;
+            transition: all .7s ease-in-out;
+            clip-path: circle(75%);
+        }
+        .card4:hover{
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+            box-shadow: 0px 2px 3px rgba(0,0,0,.3);
+            transform: scale(.97);
+        }
+        .card4:hover img{
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+            transform: scale(1.6) rotate(20deg);
+            filter: blur(3px);
+        }
+        .card4 h1{
+            color: #ff3838;
+            letter-spacing: 1px;
+            margin: 0px;
+        }
+        .card4 p{
+            line-height: 24px;
+            height: 70%;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul id="menu">
+            <img src="başarcan.jpg" alt="" style="height: 125px;margin:3px;padding: 2px;">
+            <li><a href="Girişvekaydol.html" style="color:#ffffff;background-color: #ff2a00;border-radius: 50px; font-family: 'Righteous', cursive;font-size: 18px;" class="girisyap">Giriş Yap / Kaydol</a></li>
+            <li><a href="eticaret.html">E-Ticaret</a></li>
+            <li><a href="hakkımızda.html">Hakkımızda</a></li>
+            <li><a href="index.html">Ana Sayfa</a></li>
+        </ul>
+    </header>
+    <section>
+        <h1 style="text-align: center;font-size: 33px;font-family: 'Righteous', cursive;letter-spacing: 1px;color: #6F1AB6;">- E-Ticaret'te Bazı İş Modelleri -</h1>
+        <div class="wrapper">
+            <div class="card">
+                <img src="dropshiping.jpg" alt="">
+                <div class="descriptions">
+                    <h1 style="font-family: 'Righteous', cursive;">Dropshipping Nedir ?(Stoksuz Satış)</h1>
+                    <p>
+                        Dropshipping, kısaca fiziksel ürünlere sahip olmadan ürün satabileceğiniz iş modelidir. Yani bir müşteri bir şey satın aldığında, ürün tedarikçisi ürünü direkt olarak müşteriye yollayacaktır. E-ticarette çok tercih edilen bir yöntemdir.Başka bir deyişle, yalnızca müşterinin ürünü satın almasına yardımcı olursunuz. Dropshipping işinde envanter yönetim sistemleri, depolama, nakliye maliyetleri ve lojistik ile uğraşmaya gerek yoktur. Bunlar sizin için halledilir.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper2">
+            <div class="card2">
+                <img src="amazonfba.jpg" alt="">
+                <div class="descriptions2">
+                    <h1 style="font-family: 'Righteous', cursive;">Amazon Ve Amazon FBA Nedir ?</h1>
+                    <p>
+                        Amazon internetten Satış Yapabileceğiniz Bir Sitedir Burda Kendi Şirketinizi Açarak Burda Satış Yaparsınız Ve Eğer Depo Anlamında Zorluk Yaşıyorsanız Amazon Sizlere Depolarınızı Saklama İmkanı Sağlar. FBA ile ürünlerinizi Amazon Türkiye’nin anlaşmalı lojistik merkezlerinde depolarsınız. Amazon hazırlama, paketleme, hızlı teslimat ile gönderme süreçlerini yönetir ve bu siparişler için 7/24 müşteri hizmeti sağlar. Böylece Amazon Lojistik, işinizi büyütmenizde ve daha fazla müşteriye ulaşmanızda size zaman kazandırır.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper3">
+            <div class="card3">
+                <img src="B2C-işmodeli.png" alt="">
+                <div class="descriptions3">
+                    <h1 style="font-family: 'Righteous', cursive;">B2C(İşletme-Tüketici) Nedir ?</h1>
+                    <p>
+                        B2C iş modeli, ülkemizde en çok tercih edilen ve kullanılan modeldir. Anlam olarak baktığımızda, firmadan tüketiciye yönelik e-ticaret modeli olarak adlandırılır. Tüm e-ticaret siteleri birer B2C iş modeli örneğidir. Bu modelde firmalar ürün/hizmetlerini kendi sanal mağazalarında ya da birçok firmanın ürünlerini satışa sunduğu alışveriş portallarında satışa sunabilirler. Tüketiciler de aradıkları ürünleri, bu e-ticaret siteleri üzerinden bularak online alışveriş süreçlerini tamamlayabilirler.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper4">
+            <div class="card4">
+                <img src="C2B-işmodeli.png" alt="">
+                <div class="descriptions4">
+                    <h1 style="font-family: 'Righteous', cursive;">C2B(Tüketici-İşletme) Nedir ?</h1>
+                    <p>
+                        C2B iş modeli, tüketiciden firmaya anlamına gelir. Tüketicilerin firmaya ürün/hizmet tekliflerinde bulundukları ve buna karşılık olarak firmanın tüketiciye ücret ödediği bir iş modelidir. Örnek verecek olursak; freelance işler ya da müşterilerin kullandıkları ikinci el eşyaları getirmeleri, karşılığında hediye çeki veya firmadan alınacak bir ürün için indirim gibi kampanyalar yapılmasıdır. Büyük firmaların müşterilerine böyle fırsatlar sunmaları sayesinde güvenilirlikleri ve tüketici dostu oldukları imajı sayesinde, prestijleri artmaktadır.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <img src="başarcan.jpg" alt="" style="height: 50%;margin: 60px;float: left;">  
+        <p style="color: white;font-family: 'Righteous', cursive;font-size: 25px;padding: 15px;">İletişim Bilgileri :</p>
+        <p style="color: rgb(164, 162, 162);font-family: 'Righteous', cursive;font-size: 20px;padding: 5px;">Basarcan11-M@gmail.com</p>
+        <p style="color: rgb(164, 162, 162);font-family: 'Righteous', cursive;font-size: 20px;padding: 5px;">9999-999-99-9</p>
+        
+    </footer>
+</body>
+</html>

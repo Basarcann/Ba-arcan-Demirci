@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@500&family=Playfair+Display:ital,wght@1,500&family=Righteous&family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Playfair+Display:ital,wght@1,500&family=Righteous&family=Sevillana&display=swap');
+body{
+    height: 170vh;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "section"
+    "footer"
+    ;
+    margin:0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul#menu li{
+    width: 175px;
+    float: right;
+    position: relative;
+}
+ul#menu li ul{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 55px;
+}
+ul li a{
+    display: block;
+    text-decoration: none;
+    color:#ff1744;
+    font-size: 21px;
+    text-align: center;
+    margin: 5px;
+    line-height: 123px;
+}
+ul li a:hover{
+    color: rgb(0, 0, 0);
+}
+ul#menu li:hover ul{
+    display: block;
+}
+header{
+    grid-area: header;
+    height: 22vh;
+    
+}
+section{
+    grid-area: section;
+    height: 120vh;
+}
+footer{
+    grid-area: footer;
+    height: 38vh;
+    background-color: rgb(36, 31, 31);  
+}
